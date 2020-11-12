@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 // firebase functions
-import firebase from 'firebase';
-import fireStore from './findex'
+import firebase from './findex'
 
 
 function App() {
@@ -31,15 +30,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {loading ? (
-                  <p>
-                  LOADING.....
-                </p> 
-        ) : !myAccount ? (
-          <p>
-            ログインが必要です
-          </p>
-        ) : 
+        { 
           users.map((user, index) => {
             return <p key={index}> {user.ip}</p>
           })
