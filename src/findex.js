@@ -1,4 +1,5 @@
 import firebase from 'firebase/app';
+require("firebase/firestore");
 
 const env = process.env;
 
@@ -17,6 +18,6 @@ export const firebaseConfig = {
 export const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 // Firestoreのインスタンス作成
-export const firebaseStore = firebaseApp.firestore();
+export const firebaseStore = firebaseApp.firestore;
 
 export default firebase;
