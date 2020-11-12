@@ -22,6 +22,7 @@ function App() {
           userList.push(doc.data());
       })
       setUsers(userList);
+      setLoading(false);
     }
     searchUsers();
 
